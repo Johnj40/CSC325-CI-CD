@@ -6,5 +6,6 @@ def home(request):
     return Response({
         "message": "Welcome to my CSC325 Django REST API!",
         "status": "success",
-        "version": "1.1"
+        "version": "1.1",
+        "developer": "Johann Johnson"
     })
