@@ -18,3 +18,11 @@ class APITests(TestCase):
     def test_api_version(self):
         response = self.client.get(reverse('home'))
         self.assertEqual(response.data['version'], '1.1')
+
+
+    def test_api_developer(self):
+        response = self.client.get(reverse('home'))
+        self.assertEqual(
+            response.data['developer'],
+            'Johann Johnson'
+        )
