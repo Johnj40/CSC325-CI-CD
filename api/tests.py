@@ -14,3 +14,7 @@ class APITests(TestCase):
             response.data['message'],
             'Welcome to my CSC325 Django REST API!'
         )
+
+    def test_api_version(self):
+        response = self.client.get(reverse('home'))
+        self.assertEqual(response.data['version'], '1.1')
